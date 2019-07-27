@@ -1,219 +1,82 @@
 <!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>CHENZHE'S WEBSITE</title>
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta charset="UTF-8">
+	<title>ChenZhen's website</title>
 <style type="text/css">
-.kfoutbox{position:absolute;z-index:10000;right:5px;margin:0px;width:80px;height:150px;background:#f2f2f8;}
-.i{
-	color: #000111
-	font-size:50px;
+body{
+	background-color: #ffffff;
+	color: #ffffff;
+	font-family: "Times New Roman";
+}
+h1{
+	font-family: "Times New Roman";
+}
+.card{
+	box-shadow: 0px 5px 15px #e6e6e6;
+	background-color: #e6e6e6;
+}
+.background{
+	position: absolute;
+	width:600px;
+	height:300px;
+	background-color:lightblue;
+	border:1px solid black;
+	margin: auto;
+	padding: 10px;
+	right: 360px;
+	top: 300px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-.img3{
-	margin: auto;
-	width: 1000px;
-	height: 500px;
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
 }
 </style>
 </head>
+<body>
 
-<body style="margin:0px;padding:0px;font-size:12px;">
-
-
-<div style="margin:0px auto;padding-top:200px;width:980px;height:800px;text-align:center;background:#f2f2f2;">
-
-	<img class="img3" src="2.jpg" alt="">
-
-<i>
-	<br class="i">谌喆 目前没有更新内容
-</i>
-    <a class="i" href="http://chenzhe.eastfu.cn/">查看博客</a></div>
-<div id="kfoutbox" class="kfoutbox">
-    <span id="kfboxclose" style="color:#000000"><i>关闭按钮
-
-</i>    
-联系方式:
-QQ:2127950
-295@qq.com;
-telephonenu
-mber:1304477
-1288.</span></div>
-<script language="javascript">
-var default_top_ps = 100;
-var evans_agt = navigator.userAgent.toLowerCase();
-var evans_ie = ((evans_agt.indexOf("msie") != -1) && (evans_agt.indexOf("opera") == -1) && (evans_agt.indexOf("omniweb") == -1));
-var evans_mymovey = new Number();
-function evans_IeTrueBody() {
-    return (document.compatMode && document.compatMode != "BackCompat") ? document.documentElement: document.body
-}
-function evans_GetScrollTop() {
-    return evans_ie ? evans_IeTrueBody().scrollTop: window.pageYOffset
-}
-function evans_heartBeat() {
-    evans_diffY = evans_GetScrollTop();
-    evans_mymovey += Math.floor((evans_diffY - document.getElementById('kfoutbox').style.top.replace("px", "") + default_top_ps) * 0.1);
-    document.getElementById('kfoutbox').style.top = evans_mymovey + "px"
-}
-var evans_tmpintval = window.setInterval("evans_heartBeat()", 1);
-if (document.getElementById('kfboxclose')) {
-    document.getElementById('kfboxclose').onclick = function() {
-        window.clearInterval(evans_tmpintval);
-        document.getElementById('kfoutbox').style.display = 'none'
-    }
-}
-var popupdelay = 0;
-var maxpoptimes = 3;
-var prepoptime = '10';
-function Tong_MoveDiv() {
-    this.Move = function(Id, Evt, T) {
-        if (Id == "") {
-            return
-        }
-        var o = document.getElementById(Id);
-        if (!o) {
-            return
-        }
-        evt = Evt ? Evt: window.event;
-        o.style.position = "absolute";
-        o.style.zIndex = 200;
-        var obj = evt.srcElement ? evt.srcElement: evt.target;
-        var w = o.offsetWidth;
-        var h = o.offsetHeight;
-        var l = o.offsetLeft;
-        var t = o.offsetTop;
-        var div = document.createElement("DIV");
-        document.body.appendChild(div);
-        div.style.cssText = "filter:alpha(Opacity=10,style=0);opacity:0.2;width:" + w + "px;height:" + h + "px;top:" + t + "px;left:" + l + "px;position:absolute;background:#000";
-        div.setAttribute("id", Id + "temp");
-        this.Move_OnlyMove(Id, evt, T)
-    };
-    this.Move_OnlyMove = function(Id, Evt, T) {
-        var o = document.getElementById(Id + "temp");
-        if (!o) {
-            return
-        }
-        var evt = Evt ? Evt: window.event;
-        var relLeft = evt.clientX - o.offsetLeft;
-        var relTop = evt.clientY - o.offsetTop;
-        if (!window.captureEvents) {
-            o.setCapture()
-        } else {
-            window.captureEvents(Event.MOUSEMOVE | Event.MOUSEUP)
-        }
-        document.onmousemove = function(e) {
-            if (!o) {
-                return
-            }
-            e = e ? e: window.event;
-            var bh = Math.max(document.body.scrollHeight, document.body.clientHeight, document.body.offsetHeight, document.documentElement.scrollHeight, document.documentElement.clientHeight, document.documentElement.offsetHeight);
-            var bw = Math.max(document.body.scrollWidth, document.body.clientWidth, document.body.offsetWidth, document.documentElement.scrollWidth, document.documentElement.clientWidth, document.documentElement.offsetWidth);
-            var sbw = 0;
-            if (document.body.scrollWidth < bw) sbw = document.body.scrollWidth;
-            if (document.body.clientWidth < bw && sbw < document.body.clientWidth) sbw = document.body.clientWidth;
-            if (document.body.offsetWidth < bw && sbw < document.body.offsetWidth) sbw = document.body.offsetWidth;
-            if (document.documentElement.scrollWidth < bw && sbw < document.documentElement.scrollWidth) sbw = document.documentElement.scrollWidth;
-            if (document.documentElement.clientWidth < bw && sbw < document.documentElement.clientWidth) sbw = document.documentElement.clientWidth;
-            if (document.documentElement.offsetWidth < bw && sbw < document.documentElement.offsetWidth) sbw = document.documentElement.offsetWidth;
-            if (e.clientX - relLeft <= 0) {
-                o.style.left = 0 + "px"
-            } else if (e.clientX - relLeft >= bw - o.offsetWidth - 2) {
-                o.style.left = (sbw - o.offsetWidth - 2) + "px"
-            } else {
-                o.style.left = e.clientX - relLeft + "px"
-            }
-            if (e.clientY - relTop <= 1) {
-                o.style.top = 1 + "px"
-            } else if (e.clientY - relTop >= bh - o.offsetHeight - 30) {
-                o.style.top = (bh - o.offsetHeight) + "px"
-            } else {
-                o.style.top = e.clientY - relTop + "px"
-            }
-        };
-        document.onmouseup = function() {
-            if (!o) return;
-            if (!window.captureEvents) {
-                o.releaseCapture()
-            } else {
-                window.releaseEvents(Event.MOUSEMOVE | Event.MOUSEUP)
-            }
-            var o1 = document.getElementById(Id);
-            if (!o1) {
-                return
-            }
-            var l0 = o.offsetLeft;
-            var t0 = o.offsetTop;
-            var l = o1.offsetLeft;
-            var t = o1.offsetTop;
-            Kf54MyMove.Move_e(Id, l0, t0, l, t, T);
-            document.body.removeChild(o);
-            o = null
-        }
-    };
-    this.Move_e = function(Id, l0, t0, l, t, T) {
-        if (typeof(window["ct" + Id]) != "undefined") {
-            clearTimeout(window["ct" + Id])
-        }
-        var o = document.getElementById(Id);
-        if (!o) return;
-        var sl = st = 8;
-        var s_l = Math.abs(l0 - l);
-        var s_t = Math.abs(t0 - t);
-        if (s_l - s_t > 0) {
-            if (s_t) {
-                sl = Math.round(s_l / s_t) > 8 ? 8 : Math.round(s_l / s_t) * 6
-            } else {
-                sl = 0
-            }
-        } else {
-            if (s_l) {
-                st = Math.round(s_t / s_l) > 8 ? 8 : Math.round(s_t / s_l) * 6
-            } else {
-                st = 0
-            }
-        }
-        if (l0 - l < 0) {
-            sl *= -1
-        }
-        if (t0 - t < 0) {
-            st *= -1
-        }
-        if (Math.abs(l + sl - l0) < 52 && sl) {
-            sl = sl > 0 ? 2 : -2
-        }
-        if (Math.abs(t + st - t0) < 52 && st) {
-            st = st > 0 ? 2 : -2
-        }
-        if (Math.abs(l + sl - l0) < 16 && sl) {
-            sl = sl > 0 ? 1 : -1
-        }
-        if (Math.abs(t + st - t0) < 16 && st) {
-            st = st > 0 ? 1 : -1
-        }
-        if (s_l == 0 && s_t == 0) {
-            return
-        }
-        if (T) {
-            o.style.left = l0 + "px";
-            o.style.top = t0 + "px";
-            return
-        } else {
-            if (Math.abs(l + sl - l0) < 2) {
-                o.style.left = l0 + "px"
-            } else {
-                o.style.left = l + sl + "px"
-            }
-            if (Math.abs(t + st - t0) < 2) {
-                o.style.top = t0 + "px"
-            } else {
-                o.style.top = t + st + "px"
-            }
-            window["ct" + Id] = window.setTimeout("Kf54MyMove.Move_e('" + Id + "', " + l0 + " , " + t0 + ", " + (l + sl) + ", " + (t + st) + "," + T + ")", 1)
-        }
-    }
-};
-</script>
-
+<ul>
+  <li><a class="active" href="http://chenzhe.github.io/">主页</a></li>
+  <li><a href="new.html">新闻</a></li>
+  <li><a href="http://chenzhe.eastfu.cn/关于作者/">联系</a></li>
+  <li><a href="http://chenzhe.eastfu.cn/关于作者/">关于</a></li>
+</ul>
+<div class="card">
+<center><div id="div2">
+	<h1>欢迎来到 谌喆 的网站</h1>
+	<i>这是我第一个项目网站,并且我已经忘记了 Html5,JS 这些前端语言, 所以就写得很差.</i>
+<div id="div1" class="background">
+	<p>谌喆 暂时没有上传内容<button onclick="myFunction()">我的博客</button></p>
+</div>
+	
+</div></center>
+</div>
 </body>
+<script>
+function myFunction(){
+	document.getElementById("div1").style.opacity = "0.5";
+	window.location.replace("http://chenzhe.eastfu.cn/");
+	window.alert("欢迎咯")
+}
+</script>
 
 </html>
