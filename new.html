@@ -5,6 +5,10 @@
 	<title>ChenZhe's News</title>
 </head>
 <style type="text/css">
+body{
+    color: black;
+}
+a {text-decoration:none;}
 ul {
     list-style-type: none;
     margin: 0;
@@ -50,8 +54,26 @@ li a:hover {
 	padding: 10px;
 }
 p{
-	font-size: 10px;
+	font-size: 15px;
 	color: #ffffff;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.d{
+    color: #000000;
 }
 </style>
 <body>
@@ -61,123 +83,17 @@ p{
   <li><a href="http://chenzhe.eastfu.cn/关于作者/">联系</a></li>
   <li><a href="http://chenzhe.eastfu.cn/关于作者/">关于</a></li>
 </ul>
-<div class="block" ><p>暂时没有新闻</p></div>
-<div class="block1" ><p>暂时没有新闻</p></div>
-<div class="all" id='all'>
-	<div class="screen" id="screen">
-        <ul id="ul">
-            <li><img src="images/1.jpg" width="500" height="200" /></li>
-            <li><img src="images/2.jpg" width="500" height="200" /></li>
-            <li><img src="images/3.jpg" width="500" height="200" /></li>
-            <li><img src="images/4.jpg" width="500" height="200" /></li>
-            <li><img src="images/5.jpg" width="500" height="200" /></li>
-        </ul>
-        <ol></ol>
-        <div id="arr">
-        	<span id="left"><</span>
-        	<span id="right">></span>
-        </div>
-    </div>
+<div class="block" ><p>一个模拟橙子跳动的JS动画,源代码无加密>_<~</p>
+<div id="div1" class="background">
+<div class="dropdown">
+<span>鼠标移动到我这！</span>
+<div class="dropdown-content">
+    <p class="d" >源代码可用使用,但是必须注上本网址的链接</p>
+    <p class="d" ><a href="orange.html">orange源代码</a></p>
 </div>
+</div>
+</div>
+<div class="block1" ><p>暂时没有新闻</p></div>
+
 </body>
-<script type="text/javascript">
-window.onload = function () {
-    //1、获取事件源及相关元素。
-    var all = document.getElementById("all");
-    var screen = all.children[0];
-    var imgWidth = screen.offsetWidth;
-    var ul = screen.children[0];
-    var ol = screen.children[1];
-    var arr = screen.lastElementChild || screen.lastChild;
-    var spanArr = arr.children; 
-    //2、复制第一张图片的li，添加到ul最后面。
-    var ulNewLi = ul.children[0].cloneNode(true);
-    ul.appendChild(ulNewLi);
-    //3、给ol中添加li，ul中li的个数-1个，并点亮第一个按钮。
-    for(var i = 0; i<ul.children.length-1; i++){
-    	var olNewLi = document.createElement("li");
-    	olNewLi.innerHTML = i+1;
-    	ol.appendChild(olNewLi);
-    }
-    var olLiArr = ol.children;
-    olLiArr[0].className = "current";
-    //4、鼠标放到ol的li上切换图片
-    for(var i = 0;i<olLiArr.length;i++){
-    	//自定义属性,把索引值绑定到元素的index属性上
-    	olLiArr[i].index = i;
-    	olLiArr[i].onmouseover = function() {
-    		//排他思想
-    		for(var j = 0; j<olLiArr.length;j++) {
-    			olLiArr[j].className = "";	
-    		}
-    		this.className = "current"; 
-    		//鼠标放到小方块时，索引值和key以及square要同步
-    		key = square = this.index;
-    		//移动盒子
-    		animate(ul,-this.index*imgWidth);
-    	}	
-    }
-    //5、添加定时器
-    var timer = null;
-    timer = setInterval(autoPlay,1000);
-    //固定向右切换图片
-    //（两个定时器，一个记录图片，一个记录小方块）
-    var key = 0;
-    var square = 0;
-    function autoPlay(){
-    	key++;
-    	square++;
-    	if(key>5){ //转到第一张，再滑动到第二张
-            key=1;
-            ul.style.left = 0+ 'px';
-        }
-        animate(ul,-key*imgWidth);
-        square = square > olLiArr.length-1? 0:square; //对square的最大值进行约束
-        for(var i=0;i<olLiArr.length;i++){
-                olLiArr[i].className = "";
-            }
-            olLiArr[square].className = "current";
-    }
-    //鼠标放上去清除定时器，移开后再开启定时器
-        all.onmouseover = function () {
-            arr.style.display = "block";
-            clearInterval(timer);
-        }
-        all.onmouseout = function () {
-            arr.style.display = "none";
-            timer = setInterval(autoPlay,1000);
-        }
-    //6、左右切换图片（鼠标放上去显示左右按钮，移开隐藏）
-    spanArr[0].onclick = function(){
-        key--;
-        square--;
-        if(key<0){
-            key=olLiArr.length-1;
-            ul.style.left = -olLiArr.length*imgWidth+ 'px';
-        }
-        animate(ul,-key*imgWidth);
-        square = square <0 ? 4:square; //对square的最大值进行约束
-        for(var i=0;i<olLiArr.length;i++){
-            olLiArr[i].className = "";
-        }
-        olLiArr[square].className = "current";
-        //console.log(key+"  " + square);
-    }
-    spanArr[1].onclick = function(){
-    	autoPlay();
-    }
- 	function animate(ele,target){
-		clearInterval(ele.timer);
-		var speed = target>ele.offsetLeft?10:-10;
-		ele.timer = setInterval(function () {
-			var val = target - ele.offsetLeft;
-			ele.style.left = ele.offsetLeft + speed + "px";
-			if(Math.abs(val)<Math.abs(speed)){
-				ele.style.left = target + "px";
-				clearInterval(ele.timer);
-			}
-		},10)
-	}   
-} 
-</script>
 </html>

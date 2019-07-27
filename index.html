@@ -4,28 +4,53 @@
 <meta charset="UTF-8">
 	<title>ChenZhen's website</title>
 <style type="text/css">
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 body{
-	background-color: #ffffff;
+	background-image: url("images/2.jpg");
 	color: #ffffff;
 	font-family: "Times New Roman";
+	font-weight: 1px;
+}
+.i{
+	color: #333;
 }
 h1{
 	font-family: "Times New Roman";
+	text-shadow: 0px 2px 5px #cccccc;
+	font-size: 25px;
 }
 .card{
-	box-shadow: 0px 5px 15px #e6e6e6;
-	background-color: #e6e6e6;
+	box-shadow: 0px 5px 15px #333;
+	background-color: #333;
 }
 .background{
+	border-radius: 25px;
 	position: absolute;
 	width:600px;
 	height:300px;
-	background-color:lightblue;
-	border:1px solid black;
+	background-color:#ffffff;
+	border:3px solid white;
 	margin: auto;
 	padding: 10px;
 	right: 360px;
 	top: 300px;
+	box-shadow: 0px 8px 23px #000000;
+	opacity:0.4;
+	filter:alpha(opacity=40); /* IE8 及其更早版本 */
 }
 ul {
     list-style-type: none;
@@ -62,10 +87,18 @@ li a:hover {
 </ul>
 <div class="card">
 <center><div id="div2">
-	<h1>欢迎来到 谌喆 的网站</h1>
-	<i>这是我第一个项目网站,并且我已经忘记了 Html5,JS 这些前端语言, 所以就写得很差.</i>
+	<h1>谌喆 的网站</h1>
+	<p>这是我第一个项目网站,并且我已经忘记了 Html5,JS 这些前端语言, 所以就写得很差.</p>
 <div id="div1" class="background">
-	<p>谌喆 暂时没有上传内容<button onclick="myFunction()">我的博客</button></p>
+	<div class="dropdown">
+  <span>鼠标移动到我这！</span>
+  <div class="dropdown-content">
+    <p>谌喆的博客</p>
+    <p>chenzhe.eastfu.cn</p>
+  </div>
+</div>
+	<i class="i" >谌喆 暂时没有上传任何内容  <button onclick="myFunction()">我的博客</button></i>
+
 </div>
 	
 </div></center>
