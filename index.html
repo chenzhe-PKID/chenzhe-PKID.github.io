@@ -2,23 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
 	<title>ChenZhen's website</title>
 <style type="text/css">
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+
 body{
 	background-image: url("images/2.jpg");
 	color: #ffffff;
@@ -75,12 +62,20 @@ li a {
 li a:hover {
     background-color: #111;
 }
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: lightblue;
+        opacity:0.4;
+    }
+}
 </style>
 </head>
 <body>
-
+<audio src="music/生化危机战神再生.mp3">
+您的浏览器不支持 audio 标签。
+</audio>
 <ul>
-  <li><a class="active" href="http://chenzhe.github.io/">主页</a></li>
+  <li><a class="active" href="https://chenzhe.github.io/">主页</a></li>
   <li><a href="new.html">新闻</a></li>
   <li><a href="http://chenzhe.eastfu.cn/关于作者/">联系</a></li>
   <li><a href="http://chenzhe.eastfu.cn/关于作者/">关于</a></li>
@@ -89,25 +84,29 @@ li a:hover {
 <center><div id="div2">
 	<h1>谌喆 的网站</h1>
 	<p>这是我第一个项目网站,并且我已经忘记了 Html5,JS 这些前端语言, 所以就写得很差.</p>
-<div id="div1" class="background">
-	<div class="dropdown">
-  <span>鼠标移动到我这！</span>
-  <div class="dropdown-content">
-    <p>谌喆的博客</p>
-    <p>chenzhe.eastfu.cn</p>
-  </div>
 </div>
-	<i class="i" >谌喆 暂时没有上传任何内容  <button onclick="myFunction()">我的博客</button></i>
+<div class="background"><i class="i" >谌喆 暂时没有上传任何内容  <button onclick="myFunction()">我的博客</button></i>
 
-</div>
+
 	
 </div></center>
-</div>
 </body>
 <script>
 eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('7 8(){9.6("2").4.3="0.5";1.a.g("h://f.b.e/");1.d("c")}',18,18,'|window|div1|opacity|style||getElementById|function|myFunction|document|location|eastfu|欢迎咯|alert|cn|chenzhe|replace|http'.split('|'),0,{}))
 
+(function (doc, win) {
+      var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+          var clientWidth = docEl.clientWidth;
+          if (!clientWidth) return;
+          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
+        };
 
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
 </script>
 
 </html>
