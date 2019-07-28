@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<link rel="shortcut icon" href="images/4.ico" type="image/x-icon">
+<!--不要看我啦,我会害羞哒!!!!!http://chenzhe-PKID.github.io-->
+<link rel="bookmark" href="images/4.ico" type="image/x-icon">
+<!--不要看我啦,我会害羞哒!!!!!-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-	<title>ChenZhen's website</title>
+	<title>谌喆的网站</title>
 <style type="text/css">
+.button_{
+	background:#2f435e;
+	color:#f2f2f2;
+	
+	padding: 10px 30px 10px 30px;
+	font-size:16px;
+	font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
+	font-weight:bold;
+	border-radius:3px;
+	
+	-webkit-transition:all linear 0.30s;
+	-moz-transition:all linear 0.30s;
+	transition:all linear 0.30s;
+	text-decoration: none;
 
+}
 body{
 	background-image: url("images/2.jpg");
+	background-repeat:no-repeat ;
+	background-size:100% 100%;
+	background-attachment: fixed;
 	color: #ffffff;
 	font-family: "Times New Roman";
 	font-weight: 1px;
@@ -71,9 +94,7 @@ li a:hover {
 </style>
 </head>
 <body>
-<audio src="music/生化危机战神再生.mp3">
-您的浏览器不支持 audio 标签。
-</audio>
+
 <ul>
   <li><a class="active" href="https://chenzhe.github.io/">主页</a></li>
   <li><a href="new.html">新闻</a></li>
@@ -83,24 +104,21 @@ li a:hover {
 <div class="card">
 <center><div id="div2">
 	<h1>谌喆 的网站</h1>
-	<p>这是我第一个项目网站,并且我已经忘记了 Html5,JS 这些前端语言, 所以就写得很差.</p>
+	<p>Hello,Are you coming?!</p>
 </div>
-<div class="background"><i class="i" >谌喆 暂时没有上传任何内容  <button onclick="myFunction()">我的博客</button></i>
-
-
-	
+<div class="background"><i class="i" >谌喆 暂时没有上传任何内容  <a class="button_" href="http://chenzhe.eastfu.cn">进入博客</a></i>
 </div></center>
+<audio src="music/audio.mp3" autoplay="autoplay" loop="true" id="vd"></audio>
 </body>
-<script>
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('7 8(){9.6("2").4.3="0.5";1.a.g("h://f.b.e/");1.d("c")}',18,18,'|window|div1|opacity|style||getElementById|function|myFunction|document|location|eastfu|欢迎咯|alert|cn|chenzhe|replace|http'.split('|'),0,{}))
 
+<script>
 (function (doc, win) {
       var docEl = doc.documentElement,
         resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
         recalc = function () {
           var clientWidth = docEl.clientWidth;
           if (!clientWidth) return;
-          docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
+          docEl.style.fontSize = 8 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
         };
 
       if (!doc.addEventListener) return;
@@ -108,5 +126,5 @@ eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a
       doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
 </script>
-
+<script  src="js/qwertyuiop.js"></script>
 </html>
