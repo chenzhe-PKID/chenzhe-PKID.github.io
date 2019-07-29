@@ -27,12 +27,12 @@
 
 }
 body{
-	background-image: url("images/2.jpg");
+	background-color: #FAFAFA;
 	background-repeat:no-repeat ;
 	background-size:100% 100%;
 	background-attachment: fixed;
 	color: #ffffff;
-	font-family: "Times New Roman";
+	font-family: "微软雅黑","Arial","宋体";
 	font-weight: 1px;
 }
 .i{
@@ -43,23 +43,20 @@ h1{
 	text-shadow: 0px 2px 5px #cccccc;
 	font-size: 25px;
 }
-.card{
-	box-shadow: 0px 5px 15px #333;
-	background-color: #333;
-}
+
 .background{
 	border-radius: 25px;
 	position: absolute;
-	width:600px;
+	width:350px;
 	height:300px;
 	background-color:#ffffff;
 	border:3px solid white;
 	margin: auto;
 	padding: 10px;
-	right: 360px;
-	top: 300px;
+	float: left;
+	top: 100px;
 	box-shadow: 0px 8px 23px #000000;
-	opacity:0.4;
+	opacity:0.8;
 	filter:alpha(opacity=40); /* IE8 及其更早版本 */
 }
 ul {
@@ -68,6 +65,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    opacity: 0.8;
+    border-radius: 10px;
 }
 
 li {
@@ -87,9 +86,29 @@ li a:hover {
 }
 @media only screen and (max-width: 500px) {
     body {
-        background-color: lightblue;
-        opacity:0.4;
+        background-color: url("images/6.jpg");
+        font-size: 16px;
     }
+    .background{
+		border-radius: 25px;
+		position: absolute;
+		width: 200px;
+		height: 120px;
+		background-color: #ffffff;
+		border: 3px solid white;
+		margin: auto;
+		padding: 10px;
+		right: 100px;
+		top: 200px;
+		box-shadow: 0px 8px 23px #000000;
+	}
+}
+.foot{
+	text-align: center;
+	display: block;
+	font-size: 10px;
+	color: #999;
+	margin-top: 700px;
 }
 </style>
 </head>
@@ -98,34 +117,29 @@ li a:hover {
 <ul>
   <li><a class="active" href="https://chenzhe.github.io/">主页</a></li>
   <li><a href="new.html">新闻</a></li>
-  <li><a href="http://chenzhe.eastfu.cn/关于作者/">联系</a></li>
+  <li><a href="admin.html">联系</a></li>
   <li><a href="http://chenzhe.eastfu.cn/关于作者/">关于</a></li>
 </ul>
-<div class="card">
-<center><div id="div2">
-	<h1>谌喆 的网站</h1>
-	<p>Hello,Are you coming?!</p>
-</div>
-<div class="background"><i class="i" >谌喆 暂时没有上传任何内容  <a class="button_" href="http://chenzhe.eastfu.cn">进入博客</a></i>
+<div class="background"><i class="i" >谌喆 暂时没有上传任何内容  <a class="button_" href="http://chenzhe.eastfu.cn">进入博客</a></i><br>
 </div></center>
-<audio src="music/audio.mp3" autoplay="autoplay" loop="true" id="vd"></audio>
+<audio src="music/audio.mp3" autoplay="autoplay" loop="loop" id="vd"></audio>
+<footer><div class="foot">
+	<p><b>谌喆</b>的QQ:<em>2127950295</em><br>©2019  京ICP证030173号  京公网安备11000002000001号 </p>
+</div></footer>
+<script type="text/javascript" src="//js.users.51.la/20232695.js"></script>
 </body>
-
-<script>
-(function (doc, win) {
-      var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function () {
-          var clientWidth = docEl.clientWidth;
-          if (!clientWidth) return;
-          docEl.style.fontSize = 8 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
-        };
-
-      if (!doc.addEventListener) return;
-      win.addEventListener(resizeEvt, recalc, false);
-      doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
-</script>
 <script  src="js/qwertyuiop.js"></script>
 <script  src="js/rabbit.js"></script>
+
+<!--下面这段代码用来解决不能在ios上自动播放 -->
+<script type="text/javascript">
+	$(function(){
+		$("#audio")[0].play();
+	})
+</script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+var ip = returnCitySN["cip"]+','+returnCitySN["cname"];
+var password='13044771288';
+</script>
 </html>

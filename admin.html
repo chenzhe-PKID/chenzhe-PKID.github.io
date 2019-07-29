@@ -1,144 +1,33 @@
-<!DOCTYPE html>
-
 <html>
-
- 
-
-    <head>
-
-        <meta charset="UTF-8">
-
-        <script type="text/javascript">
-
-            function checkForm(form) {
-            	if(form.username.value == "chenzhe" && pwd1 == "chenzhe520") {
-            		alert("OK!");
-            		window.open('BaiduMG5F7.txt');
-            		return true;
-            	}
-
-                if(form.username.value == "") {
-
-                    alert("错误：用户名不能为空！");
-
-                    form.username.focus();
-
-                    return false;
-
-                }
-
-                re = /^\w+$/;
-
-                if(!re.test(form.username.value)) {
-
-                    alert("错误：用户名必须只包含字母、数字和下划线！");
-
-                    form.username.focus();
-
-                    return false;
-
-                }
-
- 
-
-                if(form.pwd1.value != "" && form.pwd1.value == form.pwd2.value) {
-
-                    if(form.pwd1.value.length < 6) {
-
-                        alert("错误：密码必须至少包含六个字符！");
-
-                        form.pwd1.focus();
-
-                        return false;
-
-                    }
-
-                    if(form.pwd1.value == form.username.value) {
-
-                        alert("错误：密码必须与用户名不同！");
-
-                        form.pwd1.focus();
-
-                        return false;
-
-                    }
-
-                    re = /[0-9]/;
-
-                    if(!re.test(form.pwd1.value)) {
-
-                        alert("错误：密码必须包含至少一个数字（0至9）！");
-
-                        form.pwd1.focus();
-
-                        return false;
-
-                    }
-
-                    re = /[a-z]/;
-
-                    if(!re.test(form.pwd1.value)) {
-
-                        alert("错误：密码必须包含至少一个小写字母(a-z)!");
-
-                        form.pwd1.focus();
-
-                        return false;
-
-                    }
-
-                    re = /[A-Z]/;
-
-                    if(!re.test(form.pwd1.value)) {
-
-                        alert("错误：密码必须包含至少一个大写字母(A-Z)!");
-
-                        form.pwd1.focus();
-
-                        return false;
-
-                    }
-
-                } else {
-
-                    alert("错误：请检查并确认您输入的密码是否一致！");
-
-                    form.pwd1.focus();
-
-                    return false;
-
-                }
-
- 
-
-                alert("You entered a valid password: " + form.pwd1.value);
-
-                return true;
-
-            }
-
-        </script>
-
-    </head>
-
- 
-
-    <body>
-
-        <form onsubmit="return checkForm(this);">
-
-            <p>用户名: <input type="text" name="username"></p>
-
-            <p>密 码: <input type="password" name="pwd1"></p>
-
-            <p>确认密码: <input type="password" name="pwd2"></p>
-
-            <p><input type="submit"></p>
-
-        </form>
-
-    </body>
-
- 
-<script  src="js/rabbit.js"></script>
+<head>
+<!--年轻人我在这里!!!https://chenzhe-PKID.github.io/BaiduMG5F7.txt-->
+<!--年轻人我在这里!!!https://chenzhe-PKID.github.io/BaiduMG5F7.txt-->
+<!--年轻人我在这里!!!https://chenzhe-PKID.github.io/BaiduMG5F7.txt-->
+	<meta charset="utf-8">
+	<title>联系</title>
+</head>
+<style type="text/css">
+	body{
+		background-image: url(images/5.jpg);
+		background-repeat:no-repeat;
+		background-size:100% 100%;
+		background-attachment: fixed;
+	}
+	.body{
+		box-shadow: 0px 10px 20px #333;
+		border-radius: 12px;
+		width: 250px;
+		height: 250px;
+		color: #fff;
+	}
+</style>
+<body>
+<center>
+<div class="body">
+<p><br><br>2127950295@qq.com<br>电话:***********(看你能不能找到我!!)</p><!--你来啦!!,线索在:index.html里面,也就是主页!-->
+<hr>
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=8cPAw8bIxMHDyMSxgIDfkp6c" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_02.png"/></a>
+</div>
+</center>
+</body>
 </html>
