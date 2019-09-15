@@ -1,31 +1,138 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <link rel="shortcut icon" href="images/4.ico" type="image/x-icon">
 <!--不要看我啦,我会害羞哒!!!!!http://chenzhe-PKID.github.io-->
 <link rel="bookmark" href="images/4.ico" type="image/x-icon">
 <!--不要看我啦,我会害羞哒!!!!!-->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-	<title>ChenZhe's News</title>
-</head>
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+name="viewport">
+  <title>chenzhe's blog</title>
 <style type="text/css">
-body{
-    color: black;
-    background-image: url("images/2.jpg");
-    background-size:100% 100%;
-    background-attachment: fixed;
+.masked{
+    text-align: center;
+    background-image: -webkit-linear-gradient(left, #147B96, #E6D205 25%, #147B96 50%, #E6D205 75%, #147B96);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: masked-animation 4s infinite linear;
 }
-a {text-decoration:none;}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border-radius: 12px;
-    background-color: #333;
+@-webkit-keyframes masked-animation {
+     0%{ background-position: 0 0;}
+     100% { background-position: -100% 0;}
+}
+.elm {
+  /*Firefox*/
+  -moz-calc(expression);
+  /*chrome safari*/
+  -webkit-calc(expression);
+  /*Standard */
+  calc();
+ }
+.pp {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  font-size: 12px;
+  text-align: center;
+  bottom: 0;
+  margin: auto;
+  background-color: #333
+}
+</style>
+<style type="text/css">
+.button_{
+  background:#2f435e;
+  color:#f2f2f2;
+  padding: 10px 30px 10px 30px;
+  font-size:16px;
+  font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
+  font-weight:bold;
+  border-radius:3px;
+  -webkit-transition:all linear 0.30s;
+  -moz-transition:all linear 0.30s;
+  transition:all linear 0.30s;
+  text-decoration: none;
+}
+body{
+  background-image: -moz-linear-gradient(top, #1abc9c, #e6e5e5); /*火狐*/
+  background: -o-linear-gradient(top, #1abc9c 0%,e6e5e5 100%);/*Opera*/
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1abc9c),color-stop(1,#16a085)); /*Chrome*/
+  background-image: -ms-linear-gradient(top, #1abc9c, #e6e5e5);
+  background-repeat:no-repeat ;
+  background-size:100% 100%;
+  background-attachment: fixed;
+  color: #ffffff;
+  font-family: "微软雅黑","Arial","宋体";
+  font-weight: 1px;
+}
+.i{
+  color: #333;
+  text-decoration: none;
+}
+h1{
+  font-family: "Times New Roman";
+  text-shadow: 0px 2px 5px #cccccc;
+  font-size: 25px;
 }
 
+.background{
+  width: 160px;
+  border-radius: 0px;
+  position: absolute;
+  width: calc(100% - (100%/2px));
+  background-color:white;
+  border:3px solid white;
+  margin: auto;
+  padding: 10px;
+  float: left;
+  top: 100px;
+  box-shadow: 0px 8px 23px #000000;
+  opacity:0.8;
+  transition: .5s;
+  filter:alpha(opacity=40); /* IE8 及其更早版本 */
+}
+.background2{
+  width: 160px;
+  border-radius: 0px;
+  position: absolute;
+  width: calc(100% - (100%/2px));
+  background-color:white;
+  border:3px solid white;
+  margin: auto;
+  padding: 10px;
+  float: left;
+  top: 100px;
+  box-shadow: 0px 8px 23px #000000;
+  opacity:0.8;
+  transition: .5s;
+  left: 200px;
+  filter:alpha(opacity=40); /* IE8 及其更早版本 */
+}
+.background:hover{
+  border-radius: 25px;
+}
+.background2:hover{
+  border-radius: 25px;
+}
+ul {
+  position: absolute;
+  top: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  opacity: 0.7;
+  border-radius: 10px;
+  transition: .6s
+  z-index:10;
+}
+ul:hover{
+  border-radius: 20px;
+}
 li {
     float: left;
 }
@@ -41,76 +148,178 @@ li a {
 li a:hover {
     background-color: #111;
 }
-.block{
-	display: block;
-	position: absolute;
-	background-color: #cccccc;
-	box-shadow: 0px 5px 15px #000000;
-	width: 400px;
-	height: 300px;
-	top: 100px;
-	padding: 10px;
-    filter:alpha(opacity=40); /* IE8 及其更早版本 */
-    border-radius: 10px;
-    float: left;
-}
-div.imgcard{
-    width: 250px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    background-color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    float: left;
-}
 
-div.container{
-    padding: 10px;
+.img{
+  position: relative;
+  right: -1px;
+  float: right;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
 }
+.c-icon-jgwablogo {
+  background-image: url(images/icons.png);
+  border-image-repeat: no-repeat;
+  background-position: -623px -96px;
+  background-position-x: -623px;
+  background-position-y: -96px;
+  position: relative;
+  top: 3px;
+}
+@media only screen and (max-width: 660px) {
+  body {
+    background-image: url(images/white.jpg);
+    font-size: 16px;
+  }
 
-p{
-	font-size: 15px;
-	color: #000000;
+}
+.img2 {
+  position: relative;
+  padding: 3px;
+  left: 700px;
+  border-radius: 10px;
 }
 </style>
+</head>
 <body>
-<ul>
-  <li><a class="active" href="https://github.com/chenzhe-github.io/">主页</a></li>
+<div id="particles-js" style="z-index: -6;">
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<ul onMouseOver="over(this)" onMouseOut="leave(this)">
+  <li><a class="active" href="https://chenzhe-PKID.github.io/">主页</a></li>
   <li><a href="new.html">新闻</a></li>
-  <li><a href="http://chenzhe.eastfu.cn/关于作者/">联系</a></li>
-  <li><a href="http://chenzhe.eastfu.cn/关于作者/">关于</a></li>
+  <li><a href="admin.html">联系</a></li>
+  <li><a href="about.html">关于</a></li>
+  <img src="images/icon.png" width="200" height="40" alt="" class="img2">
+  <a href="404.html"><img src="images/icon-search.png" class="img"></a>
 </ul>
-<!--1-->
-<div class="imgcard">
-    <img src="images/orange.jpg" style="width:100%"/>
-    <div class="container">
-        <p><a href="orange.html" style="color: #333;"><b>跳动的橙子源代码</b></a></p>
-    </div>
+<div class="background" id='background' onMouseOver="over(this)" onMouseOut="leave(this)"><i class="i" ><a class="i" href="demo.html">kali linux 的艺术
 </div>
-<!--2-->
-<div class="imgcard">
-    <img src="images/watch.jpg" style="height: 155px;width: 250px;"/>
-    <div class="container">
-        <p><a href="watch.html" style="color: #333;"><b>钟表动画源代码</b></a></p>
-    </div>
-</div>
-<!--3-->
-</body>
-<script>
-(function (doc, win) {
-      var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function () {
-          var clientWidth = docEl.clientWidth;
-          if (!clientWidth) return;
-          docEl.style.fontSize = 8 * (clientWidth / 320) + 'px';//其中“20”根据你设置的html的font-size属性值做适当的变化
-        };
+<div class="background2" id='background' onMouseOver="over(this)" onMouseOut="leave(this)"><i class="i" ><a class="i" href="demo.html">program 的艺术
+</div></center>
+<audio src="music/audio.mp3" id="vd"></audio>
 
-      if (!doc.addEventListener) return;
-      win.addEventListener(resizeEvt, recalc, false);
-      doc.addEventListener('DOMContentLoaded', recalc, false);
-    })(document, window);
-</script>
-<script  src="js/qwertyuiop.js"></script><!--不要看我啦,我会害羞哒!!!!!-->
+<div class="pp" id="spans">
+  <a href="admin.html" style="color: #999;text-decoration: none;">意见反馈</a>
+  <a href="about.html" style="color: #999;text-decoration: none;">关于网站 </a>
+  <p style="color: #999;">©2019  京ICP证030173号 京公网安备11000002000001号</p>
+</div>
+</div>
+<!--<script type="text/javascript" src="//js.users.51.la/20232695.js"></script>-->
+</body>
+<script  src="js/qwertyuiop.js"></script>
 <script  src="js/rabbit.js"></script>
-<script  src="js/404.js"></script>
+
+<!--下面这段代码用来解决不能在ios上自动播放 -->
+
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+var ip = returnCitySN["cip"]+','+returnCitySN["cname"];
+var span=document.getElementById('');
+function over(obj){
+  obj.style.opacity="1.0";
+}
+function leave(obj){
+  obj.style.opacity="0.5";
+}
+
+</script>
+<script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('0 1=\'2==\';',3,3,'var|password|NWFXOTVaQ25JZVM5b09TNGplYVlyK2VzcU9pYml5RUs1TGlONkwrSDVyS2g1cHlKNllLajVMbUk1NjZBNVkyVjVaT21JU0VLTnpRMk5qZ3dObVppWW1abFpHWTJNR0l5WTJReU9XVTRNMlkzWXpBelpqWUs1TGlLNloyaTU1cUU1cGl2VFVRMUN1YUlrZWVjaStTOW9PYUFqdVM1aU9pbm8rV3ZoaUVoSVNFSzVaaS81WmkvNVppLzVaaS81WmkvTGk0dQ'.split('|'),0,{}))
+// 创建Base64对象
+var Base64 = {
+ _keyStr: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+ encode: function(e) {
+  var t = "";
+  var n, r, i, s, o, u, a;
+  var f = 0;
+  e = Base64._utf8_encode(e);
+  while (f < e.length) {
+   n = e.charCodeAt(f++);
+   r = e.charCodeAt(f++);
+   i = e.charCodeAt(f++);
+   s = n >> 2;
+   o = (n & 3) << 4 | r >> 4;
+   u = (r & 15) << 2 | i >> 6;
+   a = i & 63;
+   if (isNaN(r)) {
+    u = a = 64
+   } else if (isNaN(i)) {
+    a = 64
+   }
+   t = t + this._keyStr.charAt(s) + this._keyStr.charAt(o) + this._keyStr.charAt(u) + this._keyStr.charAt(a)
+  }
+  return t
+ },
+ decode: function(e) {
+  var t = "";
+  var n, r, i;
+  var s, o, u, a;
+  var f = 0;
+  e=e.replace(/[^A-Za-z0-9+/=]/g,"");
+  while (f < e.length) {
+   s = this._keyStr.indexOf(e.charAt(f++));
+   o = this._keyStr.indexOf(e.charAt(f++));
+   u = this._keyStr.indexOf(e.charAt(f++));
+   a = this._keyStr.indexOf(e.charAt(f++));
+   n = s << 2 | o >> 4;
+   r = (o & 15) << 4 | u >> 2;
+   i = (u & 3) << 6 | a;
+   t = t + String.fromCharCode(n);
+   if (u != 64) {
+    t = t + String.fromCharCode(r)
+   }
+   if (a != 64) {
+    t = t + String.fromCharCode(i)
+   }
+  }
+  t = Base64._utf8_decode(t);
+  return t
+ },
+ _utf8_encode: function(e) {
+  e = e.replace(/rn/g, "n");
+  var t = "";
+  for (var n = 0; n < e.length; n++) {
+   var r = e.charCodeAt(n);
+   if (r < 128) {
+    t += String.fromCharCode(r)
+   } else if (r > 127 && r < 2048) {
+    t += String.fromCharCode(r >> 6 | 192);
+    t += String.fromCharCode(r & 63 | 128)
+   } else {
+    t += String.fromCharCode(r >> 12 | 224);
+    t += String.fromCharCode(r >> 6 & 63 | 128);
+    t += String.fromCharCode(r & 63 | 128)
+   }
+  }
+  return t
+ },
+ _utf8_decode: function(e) {
+  var t = "";
+  var n = 0;
+  var r = c1 = c2 = 0;
+  while (n < e.length) {
+   r = e.charCodeAt(n);
+   if (r < 128) {
+    t += String.fromCharCode(r);
+    n++
+   } else if (r > 191 && r < 224) {
+    c2 = e.charCodeAt(n + 1);
+    t += String.fromCharCode((r & 31) << 6 | c2 & 63);
+    n += 2
+   } else {
+    c2 = e.charCodeAt(n + 1);
+    c3 = e.charCodeAt(n + 2);
+    t += String.fromCharCode((r & 15) << 12 | (c2 & 63) << 6 | c3 & 63);
+    n += 3
+   }
+  }
+  return t
+ }
+}
+var decodedString = Base64.decode(password);
+var fool = Base64.decode(decodedString);
+console.log("你自个慢慢 alert 吧!!反正是双重加密"); 
+</script>
+<!--线索:在控制台找到password的值,并解密.(不要懒得看代码,仔细分析加密的代码!!)-->
 </html>

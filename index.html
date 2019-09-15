@@ -79,14 +79,14 @@ h1{
 
 .background{
 	border-radius: 0px;
-	position: relative;
+	position: absolute;
 	width: calc(100% - (100%/2px));
 	background-color:white;
 	border:3px solid white;
 	margin: auto;
 	padding: 10px;
 	float: left;
-	top: 10px;
+	top: 100px;
 	box-shadow: 0px 8px 23px #000000;
 	opacity:0.8;
   transition: .5s;
@@ -96,6 +96,8 @@ h1{
   border-radius: 25px;
 }
 ul {
+  position: absolute;
+  top: 0;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -104,6 +106,7 @@ ul {
   opacity: 0.7;
   border-radius: 10px;
   transition: .6s
+  z-index:10;
 }
 ul:hover{
   border-radius: 20px;
@@ -157,7 +160,9 @@ li a:hover {
 </style>
 </head>
 <body>
-
+<div id="particles-js" style="z-index: -6;">
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
 <ul onMouseOver="over(this)" onMouseOut="leave(this)">
   <li><a class="active" href="https://chenzhe-PKID.github.io/">主页</a></li>
   <li><a href="new.html">新闻</a></li>
@@ -170,18 +175,12 @@ li a:hover {
 </div></center>
 <audio src="music/audio.mp3" id="vd"></audio>
 
-
-
-
 <div class="pp" id="spans">
 	<a href="admin.html" style="color: #999;text-decoration: none;">意见反馈</a>
 	<a href="about.html" style="color: #999;text-decoration: none;">关于网站 </a>
 	<p style="color: #999;">©2019  京ICP证030173号 京公网安备11000002000001号</p>
 </div>
-
-
-
-
+</div>
 <!--<script type="text/javascript" src="//js.users.51.la/20232695.js"></script>-->
 </body>
 <script  src="js/qwertyuiop.js"></script>
