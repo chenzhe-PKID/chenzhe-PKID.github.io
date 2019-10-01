@@ -32,21 +32,24 @@ name="viewport">
 	calc();
  }
 .pp {
-	position: absolute;
-	width: 100%;
-	height: 50px;
-	font-size: 12px;
-	text-align: center;
-	bottom: 0;
-	margin: auto;
-	background-color: #333
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    font-size: 12px;
+    text-align: center;
+    bottom: -100vh;
+    margin: auto;
+    background-color: #333;
 }
 </style>
 <style type="text/css">
 .button_{
 	background:#2f435e;
 	color:#f2f2f2;
-	padding: 10px 30px 10px 30px;
+	    /* height: 20px; */
+    background: #2f435e;
+    color: #f2f2f2;
+    padding: 5px 10px 5px 10px;
 	font-size:16px;
 	font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
 	font-weight:bold;
@@ -57,18 +60,20 @@ name="viewport">
 	text-decoration: none;
 }
 body{
-    margin: 0;
-    padding: 0;
-    background-image: -moz-linear-gradient(top, #2b1abc, #F75000); /*火狐*/
-    background: -o-linear-gradient(top, #2b1abc 0%,#e6e5e5 100%);/*Opera*/
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2b1abc),color-stop(1,#F75000)); /*Chrome*/
-    background-image: -ms-linear-gradient(top, #2b1abc, #F75000);
-    background-repeat:no-repeat ;
-    background-size:100% 100%;
-    background-attachment: fixed;
-    color: #ffffff;
-    font-family: "微软雅黑","Arial","宋体";
-    font-weight: 1px;
+transform: translateZ(0);
+margin: 0;
+padding: 0;
+background-image: -moz-linear-gradient(top, #FFFFFF, #BEBEBE); /*火狐*/
+background: -o-linear-gradient(top, #FFFFFF 0%,e6e5e5 100%);/*Opera*/
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFFFFF),color-stop(1,#16a085)); /*Chrome*/
+background-image: -ms-linear-gradient(top, #FFFFFF, #BEBEBE);
+background-repeat:no-repeat ;
+background-size:100% 100%;
+background-attachment: fixed;
+background-image: url(images/bg_phone.jpeg); 
+color: #ffffff;
+font-family: "微软雅黑","Arial","宋体";
+font-weight: 1px;
 }
 .i{
 	color: #333;
@@ -83,11 +88,12 @@ h1{
 	border-radius: 0px;
 	position: absolute;
 	width: calc(100% - (100%/2px));
-	background-color:white;
+	background-image:url("images/bg2.jpeg");
 	border:3px solid white;
 	margin: auto;
-	padding: 10px;
+	padding: 5px;
 	float: left;
+    background-repeat: round;
 	top: 100px;
 	box-shadow: 0px 8px 23px #000000;
 	opacity:0.8;
@@ -100,14 +106,15 @@ h1{
 ul {
   position: absolute;
   top: 0;
+  height: 60px;
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #FFFFFF;
   opacity: 0.7;
   border-radius: 10px;
-  transition: .5s;
+  transition: .5s;    /*BUG漏洞*/
 }
 ul:hover{
   border-radius: 20px;
@@ -118,7 +125,7 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: #333;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -129,12 +136,12 @@ li a:hover {
 }
 
 .img{
-	position: relative;
-	right: -1px;
-	float: right;
-	width: 25px;
-	height: 25px;
-	padding: 10px;
+    position: absolute;
+    right: 40%;
+    top: 25%;
+    float: right;
+    width: 25px;
+    height: 25px;
 }
 .c-icon-jgwablogo {
 	background-image: url(images/icons.png);
@@ -145,18 +152,24 @@ li a:hover {
 	position: relative;
 	top: 3px;
 }
-@media only screen and (max-width: 660px) {
-	body {
-		background-image: url(images/white.jpg);
-		font-size: 16px;
-	}
-
+.myhead{
+    margin
+    box-shadow: 10px 10px 10px #333;
+    right: 56%;
+    border-radius: 50px;
 }
 .img2 {
 	position: relative;
 	padding: 3px;
 	left: 700px;
 	border-radius: 10px;
+}
+@media only screen and (min-width: 680px) {
+    body {
+        background-image: url(images/white2.jpg);
+        font-size: 16px;
+    }
+
 }
 </style>
 </head>
@@ -172,7 +185,8 @@ li a:hover {
   <img src="images/icon.png" width="200" height="40" alt="" class="img2">
   <a href="404.html"><img src="images/icon-search.png" class="img"></a>
 </ul>
-<div class="background" id='background' onMouseOver="over(this)" onMouseOut="leave(this)"><i class="i" >谌喆 暂时没有上传任何内容  <a class="button_" href="http://chenzhe.eastfu.cn">进入博客</a></i><br>
+<div class="background" id='background' onMouseOver="over(this)" onMouseOut="leave(this)"><i class="i" >
+    <div><img src="images/head.jpg" width="90" height="90" class="myhead"></div> 小谌 正在国庆节度假中... <a class="button_" href="http://chenzhe.eastfu.cn">进入博客</a></i><br>
 </div></center>
 <audio src="music/audio.mp3" id="vd"></audio>
 
@@ -198,22 +212,6 @@ function over(obj){
 }
 function leave(obj){
 	obj.style.opacity="0.5";
-}
-var userAgentInfo = navigator.userAgent;
-var Agents = new Array("Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod");
-var flag = true;
-for (var v = 0; v < Agents.length; v++) {
-  if (userAgentInfo.indexOf(Agents[v]) > 0) {
-    flag = false;
-    break;
-    }
-}
-if (flag==true) {
-    console.log("电脑");
-}
-else{
-    console.log("手机");
-    window.location.href="phone.html";
 }
 </script>
 <script type="text/javascript">
