@@ -92,27 +92,12 @@ h1{
 	top: 100px;
 	box-shadow: 0px 8px 23px #000000;
 	opacity:0.9;
-        transition: .5s;
-        animation: card 2s;
-        -webkit-animation: card 2s;
+        transition: .3s;
 	filter:alpha(opacity=40); /* IE8 及其更早版本 *
 }
-@keyframes card
-{
-    from {
-        opacity:0;
-        width:30px;
-        background:#333;
-    }
-    to {
-        opacity:1;
-        background:#fff;
-        width: calc(100% - (100%/2px));
-    }
-}
-
 .background:hover{
   border-radius: 25px;
+  height: 20%;
 }
 ul {
   position: absolute;
@@ -124,10 +109,11 @@ ul {
   background-color: #333;
   opacity: 0.7;
   border-radius: 10px;
-  transition: .5s;
+  transition: .3s;
 }
 ul:hover{
   border-radius: 20px;
+  box-shadow:2px 2px 2px #fff;
 }
 li {
     float: left;
