@@ -99,46 +99,17 @@ h1{
 }
 @keyframes card
 {
-from {
+    from {
         opacity:0;
         width:30px;
+        background:#333;
     }
     to {
         opacity:1;
+        background:#fff;
         width: calc(100% - (100%/2px));
     }
 }
-
-@-moz-keyframes card
-{
-from {
-        opacity:0;
-        width:30px;
-    }
-    to {
-        opacity:1;
-        width: calc(100% - (100%/2px));
-    }
-}
-
-@-webkit-keyframes card /* Safari 和 Chrome */
-{
-from {
-        opacity:0;
-        width:30px;
-    }
-    to {
-        opacity:1;
-        width: calc(100% - (100%/2px));
-    }
-}
-
-@-o-keyframes card /* Opera */
-{
-from {background: red;}
-to {background: yellow;}
-}
-.以上为动画
 
 .background:hover{
   border-radius: 25px;
