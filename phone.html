@@ -229,6 +229,13 @@ function over(obj){
 function leave(obj){
 	obj.style.opacity="0.5";
 }
+function getLocation(){ 
+  if (navigator.geolocation){ 
+    navigator.geolocation.getCurrentPosition(showPosition,showError); 
+  }else{ 
+    alert("浏览器不支持地理定位。"); 
+  } 
+}
 </script>
 <script type="text/javascript">
 eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('0 1=\'2==\';',3,3,'var|password|NWFXOTVaQ25JZVM5b09TNGplYVlyK2VzcU9pYml5RUs1TGlONkwrSDVyS2g1cHlKNllLajVMbUk1NjZBNVkyVjVaT21JU0VLTnpRMk5qZ3dObVppWW1abFpHWTJNR0l5WTJReU9XVTRNMlkzWXpBelpqWUs1TGlLNloyaTU1cUU1cGl2VFVRMUN1YUlrZWVjaStTOW9PYUFqdVM1aU9pbm8rV3ZoaUVoSVNFSzVaaS81WmkvNVppLzVaaS81WmkvTGk0dQ'.split('|'),0,{}))
