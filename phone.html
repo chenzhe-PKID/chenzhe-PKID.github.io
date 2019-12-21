@@ -283,6 +283,58 @@ function showPosition(position){
 }
 </script>
 <script type="text/javascript">
+function getLocation(){ 
+  if (navigator.geolocation){ 
+    navigator.geolocation.getCurrentPosition(showPosition,showError); 
+  }else{ 
+    alert("浏览器不支持地理定位。"); 
+  } 
+}
+//获取用户地理位置失败时的一些错误代码处理方式
+function showError(error){ 
+  switch(error.code) { 
+    case error.PERMISSION_DENIED: 
+      alert("定位失败,用户拒绝请求地理定位"); 
+      break; 
+    case error.POSITION_UNAVAILABLE: 
+      alert("定位失败,位置信息是不可用"); 
+      break; 
+    case error.TIMEOUT: 
+      alert("定位失败,请求获取用户位置超时"); 
+      break; 
+    case error.UNKNOWN_ERROR: 
+      alert("定位失败,定位系统失效"); 
+      break; 
+  } 
+}
+function showPosition(position){ 
+  var lat = position.coords.latitude; //纬度 
+  var lag = position.coords.longitude; //经度 
+  //alert('纬度:'+lat+',经度:'+lag); 
+	//调用谷歌地图
+	//google 
+  var url = 'http://maps.google.cn/maps/api/geocode/json?latlng='+latlon+'&language=CN'; 
+  $.ajax({ 
+    type: "GET", 
+    url: url, 
+    beforeSend: function(){ 
+      $("#google_geo").html('正在定位...'); 
+    }, 
+    success: function (json) { 
+      if(json.status=='OK'){ 
+      var results = json.results; 
+        $.each(results,function(index,array){ 
+          if(index==0){ 
+            $("#google_geo").html(array['formatted_address']); 
+          } 
+        }); 
+      } 
+    }, 
+    error: function (XMLHttpRequest, textStatus, errorThrown) { 
+      $("#google_geo").html(latlon+"地址位置获取失败"); 
+    } 
+  }); 
+}
 eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('0 1=\'2==\';',3,3,'var|password|NWFXOTVaQ25JZVM5b09TNGplYVlyK2VzcU9pYml5RUs1TGlONkwrSDVyS2g1cHlKNllLajVMbUk1NjZBNVkyVjVaT21JU0VLTnpRMk5qZ3dObVppWW1abFpHWTJNR0l5WTJReU9XVTRNMlkzWXpBelpqWUs1TGlLNloyaTU1cUU1cGl2VFVRMUN1YUlrZWVjaStTOW9PYUFqdVM1aU9pbm8rV3ZoaUVoSVNFSzVaaS81WmkvNVppLzVaaS81WmkvTGk0dQ'.split('|'),0,{}))
 // 创建Base64对象
 var Base64 = {
