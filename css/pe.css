@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+}
+@font-face{
+    font-family: "pike";
+    src: url("../font/Turnpike.ttf");
+}
+@font-face{
+    font-family: "zh";
+    src: url("../font/zh.ttf");
+}
+h1{
+    color: #ffffff;
+    text-shadow: 1px 2px #3dc78e;
+    font-weight: 0px;
+    font-size: 48.4px;
+    font-family: "pike";
+    position: relative;
+    top: 80px;
+    transition: color 0.3s;
+}
+h1:hover{
+    color: #0f8855;
+}
+.header{
+    margin: 0;
+    overflow: hidden;
+    width:auto;
+    height: 160px;
+    
+    background-image: url("https://s2.ax1x.com/2020/01/13/l7eB1U.jpg");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    transition-delay: 1.2s;
+    background-position-x: -300px;
+    transition: all 17s;
+}
+.header span{
+    color: #43cc8c;
+    font-size: 43px;
+}
+.set{
+    background-color: aquamarine;
+    border-radius: 1px;
+    width: auto;
+    height: 40px;
+    position: relative;
+    top:-20px;
+    box-shadow: 3px 3px lightslategrey;
+}
+.set ul li{
+    width: auto;
+    height: 50px;
+    list-style: none;
+    float: left;
+    font-size: 15px;
+    margin-top: 5px;
+    font-family: "pike";
+    margin-left: 15px;
+    color: #37f1a4;
+    transition: color 0.6s;
+}
+.set ul li:hover{
+    color:darkcyan;
+}
+.main{
+    position: relative;
+    top: -20px;
+    width: auto;
+    height: 400px;
+    background: #FFFF99;
+    margin: 10px;
+}
+.block1{
+    width: 200px;
+    float: left;
+    height: 200px;
+    margin: 15px;
+    position: relative;
+    top: 90px;
+    left: 0px;
+    overflow: hidden;
+    padding: 12px;
+    border: 1px solid white;
+    background-image: linear-gradient(white,rgb(233, 170, 212));
+    box-shadow: 2px 2px rgba(230, 230, 133, 0.829);
+}
+.block1 h2{
+    width: 150px;
+    color: rgba(27, 27, 27, 0.507);
+    border-bottom: 1px solid #d1d1d1;
+    font-family: "zh";
+    transition: border 0.3s;
+}
+.block1 h2:hover{
+    border-bottom-color: rgb(75, 75, 75);
+}
+.block1 p{
+    color: gray;
+    font-family: "zh";
+}
+.foot{
+    background: rgb(49, 54, 58);
+    position: relative;
+    bottom: 0px;
+    width: auto;
+    height: 60px;
+    padding: 20px;
+}
+.foot p{
+    border-bottom: lightsteelblue;
+    font-family: "zh";
+    color: white;
+    height: 10px;
+}
+.foot span{
+    color: rgb(24, 0, 34);
+    font-family: "zh";
+    text-shadow: 0.6px 0.6px honeydew;
+}
+.foot a{
+    color: indigo;
+    text-decoration: none;
+}

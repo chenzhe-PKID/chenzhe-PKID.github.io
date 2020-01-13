@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(#ffff64, #ff7b00fb);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+}
+@import url("https://fonts.googleapis.com/css?family=DM+Serif+Display:400,400i|Gothic+A1:300,400,500,600,700,800&display=swap");
+#main{
+    font-size: 30px;
+    position: relative;
+    left: 30vw;
+}
+p{
+    font-size: 20px;
+    color: ivory;
+    font-family: fantasy;
+    font: 5em italic;
+    display: block;
+}
